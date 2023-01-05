@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Spreadsheet } from 'react-spreadsheet';
 function App() {
+  const data = [];
+  for (let i = 0; i < 25; i++) {
+    data.push([{}])
+    data[0].push({})
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav class="navbar">
+        <div class="navbar-container container">
+            <ul class="menu-items">
+              <li><a href="#">Post</a></li>
+            </ul>
+            <img src="./img1.jpeg" />
+        </div>
+      </nav>
+
+      <Spreadsheet data={data} />;
+    </>
   );
 }
 
